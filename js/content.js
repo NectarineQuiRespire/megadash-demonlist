@@ -19,8 +19,8 @@ export async function fetchList() {
                             ...level,
                             path
                             /*,records: level.records.sort(
-                                (a, b) => b.percent - a.percent,*/
-                            ),
+                                (a, b) => b.percent - a.percent,
+                            ),*/
                         },
                         null,
                     ];

@@ -17,6 +17,7 @@ export default {
                 </p>
                 <form class="options">
                     <div class="check">
+                    <!--
                         <input type="checkbox" id="main" value="Main List" v-model="useMainList">
                         <label for="main">Main List</label>
                     </div>
@@ -24,6 +25,7 @@ export default {
                         <input type="checkbox" id="extended" value="Extended List" v-model="useExtendedList">
                         <label for="extended">Extended List</label>
                     </div>
+                    -->
                     <Btn @click.native.prevent="onStart">{{ levels.length === 0 ? 'Start' : 'Restart'}}</Btn>
                 </form>
                 <p class="type-label-md" style="color: #aaa">
@@ -106,8 +108,8 @@ export default {
         percentage: undefined,
         givenUp: false,
         showRemaining: false,
-        useMainList: true,
-        useExtendedList: true,
+//        useMainList: true,
+//        useExtendedList: true,
         toasts: [],
         fileInput: undefined,
     }),
@@ -163,9 +165,9 @@ export default {
                 return;
             }
 
-            if (!this.useMainList && !this.useExtendedList) {
+            /*if (!this.useMainList && !this.useExtendedList) {
                 return;
-            }
+            }*/
 
             this.loading = true;
 
@@ -185,14 +187,9 @@ export default {
                 name: lvl.name,
                 video: lvl.verification,
             }));
-            const list = [];
-            if (this.useMainList) list.push(...fullListMapped.slice(0, 75));
-            if (this.useExtendedList) {
-                list.push(...fullListMapped.slice(75, 150));
-            }
 
             // random 100 levels
-            this.levels = shuffle(list).slice(0, 100);
+            this.levels = shuffle(fullListMapped).slice(0, 100);
             this.showRemaining = false;
             this.givenUp = false;
             this.progression = [];

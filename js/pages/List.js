@@ -42,10 +42,11 @@ export default {
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
-                        <li>
+                        <!-- No points for completions for now -->
+                        <!--<li>
                             <div class="type-title-sm">Points when completed</div>
                             <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
-                        </li>
+                        </li>-->
                         <li>
                             <div class="type-title-sm">ID</div>
                             <p>{{ level.id }}</p>
@@ -55,6 +56,8 @@ export default {
                             <p>{{ level.password || 'Free to Copy' }}</p>
                         </li>
                     </ul>
+                    <!-- No records -->
+                    <!--
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
                     <p v-else-if="selected +1 <= 150"><strong>100%</strong> or better to qualify</p>
@@ -74,11 +77,11 @@ export default {
                                 <p>{{ record.hz }}Hz</p>
                             </td>
                         </tr>
-                    </table>
+                    </table> -->
                 </div>
-                <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
+                <!-- <div v-else class="level" style="height: 100%; justify-content: center; align-items: center;">
                     <p>(ノಠ益ಠ)ノ彡┻━┻</p>
-                </div>
+                </div> -->
             </div>
             <div class="meta-container">
                 <div class="meta">

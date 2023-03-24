@@ -104,14 +104,14 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>What this list is about</h3>
+                    </h3>What this list is about</h3>
                     <p>
                         This list ranks all extreme demons, not just rated ones, but also unrated ones.
                     </p>
                     <p>
                         We believe all extremes are major accomplishments and they need better recognition.
                     </p>
-                    <p>
+                    </p>
                         Placements will be updated fairly frequently and you can join our Discord to debate placements.
                     </p>
                 </div>
